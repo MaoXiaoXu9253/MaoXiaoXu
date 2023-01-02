@@ -6,7 +6,7 @@
 
     <groupId>org.maoxiaoxu</groupId>
     <artifactId>MaoXiaoXu</artifactId>
-    <version>20220919</version>
+    <version>20230101</version>
     <packaging>pom</packaging>
 
     <developers>
@@ -18,7 +18,9 @@
     </developers>
 
     <properties>
-        <spring.boot.version>2.7.3</spring.boot.version>
+        <spring.boot.version>3.0.1</spring.boot.version>
+        <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,6 +32,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
